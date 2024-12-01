@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Password Generator</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=League+Spartan:wght@100;200;300;400;600&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="wrapper">
+        <h1>Password Generator</h1>
+
+        <div class="displaycont">
+            <input readonly placeholder="Password" class="display" datapwddisplay>
+
+            <button class="copyBtn" datacopy>
+                <span class="tooltip" datacopymsg></span>
+                 <img src="./assets/copy.svg" alt="copy" height="23" width="23">
+            </button>
+        </div>
+
+        <div class="inputcont">
+            <!-- Password length section -->
+            <div class="lengthcont">
+                <p>Password Length</p>
+                <p datalennum>0</p>
+            </div>
+        
+            <!-- slider -->
+            <input type="range" min="1" max="20" class="slider" step="1" datalenslider>
+            
+            <!-- checkboxes -->
+            <div class="check">
+                <input type="checkbox" id="uppercase">
+                <label for="uppercase">Includes Uppercase letters</label>
+            </div>
+
+            <div class="check">
+                <input type="checkbox" id="lowercase">
+                <label for="lowercase">Includes Lowercase letters</label>
+            </div>
+
+            <div class="check">
+                <input type="checkbox" id="numbers">
+                <label for="numbers">Includes Numbers</label>
+            </div>
+
+            <div class="check">
+                <input type="checkbox" id="symbols">
+                <label for="symbols">Includes symbols</label>
+            </div>
+
+            <!-- Strength section -->
+            <div class="strcont">
+                <p>Strength</p>
+                <div class="indicator" dataindicator></div>
+            </div>
+        </div>
+        
+        <button class="genbtn">Generate Password</button>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
